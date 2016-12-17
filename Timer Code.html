@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<body>
+  <input type="button" name="starttimer" onclick="timer()"><br>
+  <input type= "text" name = "timer" value = "T">
+  <script>
+    L = 0
+    T = 0
+    function timer() {
+      var D = new Date()
+      var S = D.getSeconds
+      if (S > L){
+        T = T ++ 1
+      } else {
+        timer()
+      }
+    }
